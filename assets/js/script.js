@@ -416,6 +416,9 @@ function prints (id) {
             var img1 = 'assets/img/lfs/print1.png';
             var img2 = 'assets/img/lfs/print2.jpg';
             var img3 = 'assets/img/lfs/print3.jpg';
+            var img4 = 'assets/img/lfs/print4.png';
+            var img5 = 'assets/img/lfs/print5.png';
+            var img6 = 'assets/img/lfs/print6.png';
 
             section.innerHTML = `
             <div class="containerprints" id="containerprints">
@@ -428,6 +431,12 @@ function prints (id) {
                     <img src="${img1}" alt="">
                     <img src="${img2}" alt="">
                     <img src="${img3}" alt="">
+                </div>
+
+                <div>
+                    <img src="${img4}" alt="">
+                    <img src="${img5}" alt="">
+                    <img src="${img6}" alt="">
                 </div>
             </div>
             `
