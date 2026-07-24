@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    transition: all 0.5s ease;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #222;
+    background-image: url('../img/background/background1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 5s ease;
+    height: 100vh; 
+    color: white;
+    font-family: "Stack Sans Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.5s ease;
+}
+
+/* header */
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    background-color: #222;
+    z-index: 1000;
+    border-bottom: 2px solid transparent;
+    transition: all 0.5s ease;
+}
+
+header nav.filter {
+    border-bottom: 2px solid white;
+    box-shadow: 0 0 2px white;
+}
+
+header nav h1 {
+    margin-left: 32px;
+    font-family: "Bowlby One SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0 0 8px rgba(0, 0, 0);
+}
+
+header nav div {
+    display: flex;
+    gap: 32px;
+    margin-right: 32px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s ease;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(0, 0, 0);
+}
+
+header nav a:hover {
+    color: #00DBFF;
+}
+
+/* main */
+
+main {
+    flex: 1;
+    margin-top: 10vh;
+}
+
+/* section inicio */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 90vh;
+    gap: 100px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.container div p {
+    font-size: xx-large;
+    font-weight: 800;
+    text-shadow: 0 0 8px black;
+}
+
+.container div img {
+    border-radius: 4px;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* section escolha do jogo */
+
+.containerescolha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    gap: 48px;
+    padding-bottom: 20px;
+}
+
+.containerescolha h2 {
+    margin-bottom: -10px;
+}
+
+.divgame {
+    display: flex; 
+    position: relative;
+}
+
+.divgame p {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-30%, -120%);
+    font-weight: 500;
+    text-shadow: 0 0 5px black;
+    font-size: 24px;
+    white-space: nowrap;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.divgame p.show {
+    opacity: 1;
+    cursor: pointer;
+    transform: translate(-50%, -120%);
+}
+
+.imgs {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+
+.imgs img {
+    transition: all 0.5s ease;
+    border: 1px solid transparent;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.5);
+    /* border: 1px solid rgba(255, 255, 255, 0.5); */
+    /* box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);  */
+}
+
+.imgs img.blur {
+    filter: blur(2px);
+    cursor: pointer;
+    border: 1px solid #00DBFF;
+    box-shadow: 0 0 10px 4px rgb(0, 219, 255, 0.1);
+}
+
+/* section prints */
+
+#prints {
+    opacity: 0;
+    transition: all 2s ease;
+    transform: translate(20%);
+}
+
+#prints.show {
+    opacity: 1;
+    transform: translate(0);
+}
+
+.containerprints {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 32px;
+    margin-right: 32px;
+    gap: 48px;
+    padding: 10px;
+    opacity: 1;
+}
+
+.containerprints.show {
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.containerprints.filter {
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: -28px;
+}
+
+.top h2 {
+    white-space: nowrap;
+}
+
+.fechar {
+    background-image: url('../img/icons/closewhite.png');
+    background-position: center;
+    background-size: cover;
+    height: 32px;
+    width: 32px;
+    transition: all 0.5s ease;
+}
+
+.fechar:hover {
+    background-image: url('../img/icons/closeblue.png');
+    cursor: pointer;
+}
+
+.containerprints div {
+    display: flex;
+    gap: 48px;
+}
+
+.containerprints div img {
+    width: 558px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* section sobre */
+
+.containersobre {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+.portfolio img {
+    width: 700px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.5);
+    border: 1px solid transparent;
+    transition: all 0.5s ease;
+}
+
+.portfolio img:hover {
+    border: 1px solid #00DBFF;
+    box-shadow: 0 0 10px 4px rgb(0, 219, 255, 0.1);
+}
+
+.portfolio a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.portfolio a:hover {
+    color: #00DBFF;
+}
+
+.socialmedia {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.socialmedia div {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.socialmedia img, .contato div img {
+    width: 32px;
+    transition: all 0.5s ease;
+}
+
+.socialmedia img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.contato {
+    padding: 10px;
+}
+
+.contato div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+}
+
+/* responsividade */
+
+@media (max-width: 1700px) {
+    .containerprints div {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1040px) {
+    header nav h1 {
+        font-size: 24px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+    header nav div {
+        gap: 16px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .containerescolha h2, .containersobre h2, .top h2 {
+        font-size: 20px;
+    }
+
+    .imgs {
+        flex-direction: column;
+    }
+
+    .imgs img {
+        width: 400px;
+    }
+
+    .desc p {
+        font-size: small;
+    }
+
+    .portfolio img {
+        width: 600px;
+    }
+}
+
+@media (max-width: 700px) {
+    header nav h1 {
+        font-size: 18px;
+    }
+
+    header nav a {
+        font-size: 12px;
+    }
+
+    .container div p {
+        font-size: x-large;
+    }
+
+    .container div img {
+        width: 320px;
+    }
+
+    .imgs img {
+        width: 272px;
+    }
+
+    .divgame p {
+        font-size: medium;
+    }
+
+    .containerprints div img {
+        width: 392px;
+    }
+
+    .portfolio img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 450px) {
+    header nav h1 {
+        margin-left: 10px;
+    }
+
+    header nav div {
+        margin-right: 10px;
+    }
+
+    header nav a {
+        font-size: 10px;
+    }
+
+    .container div p {
+        font-size: larger;
+    }
+
+    .container div img {
+        width: 272px;
+    }
+
+    .containerescolha {
+        width: 100%;
+    }
+
+    .containerescolha h2, .containersobre h2, .top h2 {
+        font-size: larger;
+    }
+
+    .containerprints div img {
+        width: 272px;
+    }
+
+    .portfolio a {
+        font-size: small;
+    }
+
+    .portfolio img {
+        width: 272px;
+    }
+
+    .contato div p {
+        font-size: small;
+    }
+
+    footer p {
+        font-size: small;
+    }
+}

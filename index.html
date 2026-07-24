@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMES PICTURES</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header id="home">
+        <nav>
+            <h1>GAMES PICTURES</h1>
+            <div>
+                <a href="#home">HOME</a>
+                <a href="#sobre">SOBRE</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div>
+                    <p style="white-space: nowrap;">
+                        ESCOLHA UM JOGO
+                        <br>
+                        E <b style="color: #00DBFF;">VEJA AS MELHORES PRINTS!</b>
+                    </p>
+                </div>
+    
+                <div>
+                    <img src="assets/img/banners/bannerets2.jpg" alt="" id="imgchange">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="containerescolha">
+                <h2>ESCOLHA O JOGO:</h2>
+
+                <div class="imgs">
+                    <div class="divgame" onmouseover="bannerFilter(1)" onmouseout="bannerFilterOff()" onclick="prints(1)">
+                        <img src="assets/img/banners/bannerets2.jpg" alt=""id="1">
+                        <p id="textets2">Euro Truck Simulator 2</p>
+                    </div>
+                    <div class="divgame" onmouseover="bannerFilter(2)" onmouseout="bannerFilterOff()" onclick="prints(2)">
+                        <img src="assets/img/banners/bannerats.jpg" alt="" id="2">
+                        <p id="textats">American Truck Simulator</p>
+                    </div>
+                </div>
+
+                <div class="imgs">
+                    <div class="divgame" onmouseover="bannerFilter(3)" onmouseout="bannerFilterOff()" onclick="prints(3)">
+                        <img src="assets/img/banners/bannerbd.png" alt="" id="3">
+                        <p id="textbd">BeamNG Drive</p>
+                    </div>
+
+                    <div class="divgame" onmouseover="bannerFilter(4)" onmouseout="bannerFilterOff()" onclick="prints(4)">
+                        <img src="assets/img/banners/bannermine.png" alt="" id="4">
+                        <p id="textmine">Minecraft</p>
+                    </div>
+                </div>
+
+                <div class="imgs"> 
+                    <div class="divgame" onmouseover="bannerFilter(5)" onmouseout="bannerFilterOff()" onclick="prints(5)">
+                        <img src="assets/img/banners/bannerlfs.png" alt="" id="5">
+                        <p id="textlfs">Live For Speed</p>
+                    </div>
+
+                    <div class="divgame" onmouseover="bannerFilter(6)" onmouseout="bannerFilterOff()" onclick="prints(6)">
+                        <img src="assets/img/banners/bannermsc.jpg" alt="" id="6"> 
+                        <p id="textmsc">My Summer Car</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prints"></section>
+
+        <section id="sobre">
+            <div class="containersobre">
+                <h2>SOBRE</h2>
+
+                <div class="desc">
+                    <p>
+                        Com o objetivo de aprimorar meus conhecimentos em HTML, CSS e JavaScript, desenvolvi esse site onde coloco as prints que tirei dos jogos que mais gosto.
+                        <br><br>
+                        Todo elogio ou crítica são bem-vindos. Fique à vontade para comentar!
+                    </p>
+                </div>
+
+                <div class="portfolio">
+                    <h2>CONHEÇA MEU PORTFÓLIO!</h2>
+                    <img src="assets/img/icons/Miniatura Portifólio - 2026.png" alt="">
+                    <a href="https://viniboyjr.github.io/portfolio/" target="_blank">https://viniboyjr.github.io/portfolio/</a>
+                </div>
+
+                <div class="socialmedia">
+                    <h2>REDES SOCIAIS</h2>
+
+                    <div>
+                        <a href="https://www.linkedin.com/in/viniciusborgesdacosta/" target="_blank"><img src="assets/img/icons/linkedin.png" alt=""></a>
+                        <a href="https://github.com/ViniBoyJr" target="_blank"><img src="assets/img/icons/github.png" alt=""></a>
+                        <a href="https://www.instagram.com/vini.c0sta?igsh=bzJjM2Zuc3ZsMjZr" target="_blank"><img src="assets/img/icons/instagram.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="contato">
+                    <h2>CONTATO</h2>
+
+                    <div>
+                        <img src="assets/img/icons/gmail.png" alt="">
+                        <p>viniciuscosta072007@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Vinícius Costa - 2026</p>
+    </footer>
+</body>
+<script src="assets/js/script.js"></script>
+</html>
