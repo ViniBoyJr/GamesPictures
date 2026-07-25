@@ -35,7 +35,7 @@ header nav {
     align-items: center;
     position: fixed;
     height: 10vh;
-    width: 100%;
+    width: 100vw;
     background-color: #222;
     z-index: 1000;
     border-bottom: 2px solid transparent;
@@ -405,6 +405,10 @@ footer {
 }
 
 @media (max-width: 450px) {
+    header nav {
+        width: 100%;
+    }
+
     header nav h1 {
         margin-left: 10px;
     }
