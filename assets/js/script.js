@@ -1,4 +1,4 @@
-/* Muda a cor da borda do menu */
+/* Função para mudar a cor da borda do menu */
 
 function navfilter () {
     var menu = document.querySelector("header nav");
@@ -14,7 +14,7 @@ window.addEventListener("scroll", navfilter);
 
 navfilter ();
 
-/* Função Mudar Background */
+/* Função para mudar as imagens do background */
 
 const backgroundImages = [
     'url("assets/img/background/background1.png")',
@@ -34,7 +34,7 @@ setInterval (mudarBackground, 10000);
 
 mudarBackground ();
 
-/* Função Mudar Imagem Home */
+/* Função para mudar as imagens da div container */
 
 const homeImages = [
     "assets/img/banners/bannerets2.jpg",
@@ -58,7 +58,7 @@ setInterval (mudarImgHome, 5000);
 
 mudarImgHome ();
 
-/* Função Filtro No Banner */
+/* Função para aplicar o filtro no banner */
 
 function bannerFilter (id) {
     
@@ -92,7 +92,7 @@ function bannerFilter (id) {
     }
 }
 
-/* Função Tirar Filtro Do Banner */
+/* Função para tirar o filtro do banner */
 
 function bannerFilterOff () {
     document.getElementById("1").classList.remove("blur");
@@ -114,8 +114,13 @@ function bannerFilterOff () {
     document.getElementById("textmsc").classList.remove("show");
 }
 
+/* Função para abrir a janela das prints */
+
 function prints (id) {
+    var escolha = document.getElementById("escolha");
     var section = document.getElementById("prints");
+    escolha.innerHTML = "";
+    escolha.classList.add("hide");
     section.classList.add("show");
 
     switch (id) {
@@ -143,7 +148,7 @@ function prints (id) {
             <div class="containerprints" id="containerprints">
                 <nav class="top">
                     <h2 id="gamename">Euro Truck Simulator 2</h2>
-                    <div class="fechar" onclick="fechar()"></div>
+                    <a href="#escolha"><div class="fechar" onclick="fechar()"></div></a>
                 </nav>
 
                 <div>
@@ -206,7 +211,7 @@ function prints (id) {
             <div class="containerprints" id="containerprints">
                 <nav class="top">
                     <h2 id="gamename">American Truck Simulator</h2>
-                    <div class="fechar" onclick="fechar()"></div>
+                    <a href="#escolha"><div class="fechar" onclick="fechar()"></div></a>
                 </nav>
 
                 <div>
@@ -267,7 +272,7 @@ function prints (id) {
             <div class="containerprints" id="containerprints">
                 <nav class="top">
                     <h2 id="gamename">BeamNG Drive</h2>
-                    <div class="fechar" onclick="fechar()"></div>
+                    <a href="#escolha"><div class="fechar" onclick="fechar()"></div></a>
                 </nav>
 
                 <div>
@@ -343,7 +348,7 @@ function prints (id) {
             <div class="containerprints" id="containerprints">
                 <nav class="top">
                     <h2 id="gamename">Minecraft</h2>
-                    <div class="fechar" onclick="fechar()"></div>
+                    <a href="#escolha"><div class="fechar" onclick="fechar()"></div></a>
                 </nav>
 
                 <div>
@@ -424,7 +429,7 @@ function prints (id) {
             <div class="containerprints" id="containerprints">
                 <nav class="top">
                     <h2 id="gamename">Live For Speed</h2>
-                    <div class="fechar" onclick="fechar()"></div>
+                    <a href="#escolha"><div class="fechar" onclick="fechar()"></div></a>
                 </nav>
 
                 <div>
@@ -448,7 +453,7 @@ function prints (id) {
             <div class="containerprints" id="containerprints">
                 <nav class="top">
                     <h2 id="gamename">My Summer Car</h2>
-                    <div class="fechar" onclick="fechar()"></div>
+                    <a href="#escolha"><div class="fechar" onclick="fechar()"></div></a>
                 </nav>
 
                 <div>
@@ -460,13 +465,59 @@ function prints (id) {
     }
 }
 
+/* Função para fechar a janela das prints */ 
+
 function fechar () {
+    document.getElementById("escolha").innerHTML = `
+    <div class="containerescolha">
+        <h2>ESCOLHA O JOGO:</h2>
+
+        <div class="imgs">
+            <a href="#escolha"><div class="divgame" onmouseover="bannerFilter(1)" onmouseout="bannerFilterOff()" onclick="prints(1)">
+                <img src="assets/img/banners/bannerets2.jpg" alt=""id="1">
+                <p id="textets2">Euro Truck Simulator 2</p>
+            </div></a>
+
+            <a href="#escolha"><div class="divgame" onmouseover="bannerFilter(2)" onmouseout="bannerFilterOff()" onclick="prints(2)">
+                <img src="assets/img/banners/bannerats.jpg" alt="" id="2">
+                <p id="textats">American Truck Simulator</p>
+            </div></a>
+        </div>
+
+        <div class="imgs">
+            <a href="#escolha"><div class="divgame" onmouseover="bannerFilter(3)" onmouseout="bannerFilterOff()" onclick="prints(3)">
+                <img src="assets/img/banners/bannerbd.png" alt="" id="3">
+                <p id="textbd">BeamNG Drive</p>
+            </div></a>
+
+            <a href="#escolha"><div class="divgame" onmouseover="bannerFilter(4)" onmouseout="bannerFilterOff()" onclick="prints(4)">
+                <img src="assets/img/banners/bannermine.png" alt="" id="4">
+                <p id="textmine">Minecraft</p>
+            </div></a>
+        </div>
+
+        <div class="imgs"> 
+            <a href="#escolha"><div class="divgame" onmouseover="bannerFilter(5)" onmouseout="bannerFilterOff()" onclick="prints(5)">
+                <img src="assets/img/banners/bannerlfs.png" alt="" id="5">
+                <p id="textlfs">Live For Speed</p>
+            </div></a>
+
+            <a href="#escolha"><div class="divgame" onmouseover="bannerFilter(6)" onmouseout="bannerFilterOff()" onclick="prints(6)">
+                <img src="assets/img/banners/bannermsc.jpg" alt="" id="6"> 
+                <p id="textmsc">My Summer Car</p>
+            </div></a>
+        </div>
+    </div>
+    `;
+
     var containerprints = document.getElementById("containerprints");
     var section = document.getElementById("prints");
+    var escolha = document.getElementById("escolha");
 
     if (containerprints) {
         containerprints.classList.add("filter");
         section.classList.remove("show");
+        escolha.classList.remove("hide");
 
         setTimeout(() => {
             containerprints.remove();
