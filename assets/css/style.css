@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -50,10 +50,11 @@ header nav.filter {
 
 header nav h1 {
     margin-left: 24px;
-    font-family: "Bowlby One SC", sans-serif;
-    font-weight: 400;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 600;
     font-style: normal;
     text-shadow: 0 0 8px rgba(0, 0, 0);
+    font-size: 40px;
 }
 
 header nav div {
@@ -363,7 +364,7 @@ footer {
 
 @media (max-width: 1040px) {
     header nav h1 {
-        font-size: 24px;
+        font-size: 30px;
     }
 
     header nav a {
